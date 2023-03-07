@@ -1,4 +1,21 @@
 baseURL = 'http://wag-vpn.github.io/'
 languageCode = 'en-us'
-title = 'Wag VPN Documentation'
+title = 'Wag'
 theme = "hugo-book"
+
+custom_css = ["css/carousel.css"]
+custom_js = ["js/carousel.js"]
+
+[params]
+  # (Optional, default light) Sets color theme: light, dark or auto.
+  # Theme 'auto' switches between dark and light modes based on browser/os preferences
+  BookTheme = 'light'
+  BookToC = false
+  BookLogo = 'img/WagLogo.png'
+  BookComments = false
+
+
+[markup]
+
+[markup.goldmark.renderer]
+  unsafe = true
