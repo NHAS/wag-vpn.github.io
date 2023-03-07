@@ -13,7 +13,7 @@ Simplify, streamline and secure your Wireguard® deployment.
 <p>Add seamless route and port based MFA restrictions and enable always on management without exposing services to the untrusted web.</p>
 <p>Wireguard® + MFA ❤️</p>
 
-{{< button relref="docs/getting_started/" >}}Deploy it!{{< /button >}}
+{{< button relref="docs/getting_started/installation" >}}Deploy it!{{< /button >}}
 
 </div>
 
