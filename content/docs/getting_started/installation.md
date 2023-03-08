@@ -30,5 +30,5 @@ weight = 1
 This will start the wag server attached to the console. 
 
 <div style="float: right;">
-{{< button relref="docs/getting_started/user_guide" >}}Next{{< /button >}}
+{{< button relref="docs/getting_started/basics" >}}Next{{< /button >}}
 </div>

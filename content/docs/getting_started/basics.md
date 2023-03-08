@@ -47,7 +47,3 @@ The web interface itself cannot add administrative users.
 <div style="float: left;">
 {{< button relref="docs/getting_started/installation" >}}Previous{{< /button >}}
 </div>
-
-<div style="float: right;">
-{{< button relref="docs/getting_started/user_guide" >}}Next{{< /button >}}
-</div>
