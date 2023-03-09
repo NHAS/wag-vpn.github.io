@@ -10,16 +10,9 @@ A user is created in wag by registering a device, a user may have many devices b
 
 ## Create New Registration Tokens
 
-### CLI
+{{< tabs "new_token" >}}
 
-First generate a token with the [registration](/docs/reference/cli#registration) command.  
-```sh
-sh# ./wag registration -add -username tester
-token,username
-e83253fd9962c68f73aa5088604f3f425d58a963bfb5c0889cca54d63a34b2e3,tester
-```
-
-### Web UI
+{{< tab "Web UI" >}}
 
 Under the `Registration Tokens` section, add a new token.
 
@@ -30,8 +23,21 @@ Under the `Registration Tokens` section, add a new token.
 Then copy the token from here: 
 
 <img src="/img/show_ui/token_create_result.png" alt="Registration table" class="shadow">
-  
 
+{{< /tab >}}
+
+{{< tab "CLI" >}}
+
+First generate a token with the [registration](/docs/reference/cli#registration) command.  
+```sh
+sh# ./wag registration -add -username tester
+token,username
+e83253fd9962c68f73aa5088604f3f425d58a963bfb5c0889cca54d63a34b2e3,tester
+```
+{{< /tab >}}
+
+{{< /tabs >}}
+  
 ## Accessing Tokens
 
 Wag listens and exposes a public API which, when supplied the generated token will generate and insert a device into the users device list. 

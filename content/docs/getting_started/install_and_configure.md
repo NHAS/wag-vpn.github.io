@@ -37,7 +37,9 @@ Or you can always edit the `JSON` configuration file that was generated.
 See the full configuration file reference [here](/docs/reference/configuration_file).
 
 
-### Web UI
+{{< tabs "new_token" >}}
+
+{{< tab "Web UI" >}}
 
 Add yourself an administrative user using the [webadmin](/docs/reference/cli/#webadmin) subcommand:
 ```
@@ -71,8 +73,9 @@ Define your users and rules, the syntax for rule definitions can be found [here]
     <img src="/img/show_ui/rules_dialog.png" alt="New Rule" class="shadow">
 </div>
 
+{{< /tab >}}
 
-### CLI
+{{< tab "CLI" >}}
 
 Open your configuration file in whatever editor you prefer. 
 
@@ -119,6 +122,9 @@ Add your rules:
 }
 ```
 
+{{< /tab >}}
+{{< /tabs >}}
+
 ## Start!
 
 {{< hint info >}}
@@ -126,7 +132,7 @@ Add your rules:
 This will start the wag server attached to the console. 
 {{< /hint >}}
 
-```
+```sh
 sudo ./wag start
 ```
 
