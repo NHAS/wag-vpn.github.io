@@ -4,11 +4,11 @@ bookToc = true
 
 # Keycloak (OIDC) + Wag
 
-This guide will enable you to setup Wag with Keycloak as an identity provider (IdP), this ues OIDC so really any OIDC provider that supports setting group names in the OIDC claim will work. 
-However in this case keycloak is a good and easy way to start. 
-  
-  
-This guide expects that you already have a keycloak realm configured. 
+This guide will enable you to setup Wag with Keycloak as an identity provider (IdP). Wag uses OIDC so any identity provider (IdP) that supports setting group names in the OIDC claim will work.   
+However in this case keycloak is a good and easy way to start.   
+    
+    
+This guide expects that you already have a keycloak realm configured and to be running the latest version of wag (as group name requirements changed in v4.1.3).  
 If you want to test this in a development enviroment I suggest using the docker container of keycloak.
 
 ```sh
