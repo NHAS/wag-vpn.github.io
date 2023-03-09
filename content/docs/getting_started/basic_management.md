@@ -1,5 +1,5 @@
 +++
-weight = 2
+weight = 3
 +++
 
 
@@ -45,5 +45,5 @@ The web interface itself cannot add administrative users.
 
 
 <div style="float: left;">
-{{< button relref="docs/getting_started/installation" >}}Previous{{< /button >}}
+{{< button relref="docs/getting_started/install_and_configure" >}}Previous{{< /button >}}
 </div>
