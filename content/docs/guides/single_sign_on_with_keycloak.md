@@ -76,6 +76,15 @@ Additionally, an optional field may be defined. This is if your OIDC provider de
   
 You may also want to restrict users to only using the `OIDC` provider. Which you can do by setting the `Authenticators.Methods` to `["oidc"]`.
 
+<br>
+
+{{< hint info >}}
+**Info**  
+For keycloak the `IssuerUrl` will be `http://your.idp.domain/realms/<realm_name>`
+
+{{< /hint >}}
+
+
 So as an example here is a fragment of a wag configuration file:
 ```json
 "Authenticators": {                                                          
