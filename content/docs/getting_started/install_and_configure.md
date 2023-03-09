@@ -33,15 +33,14 @@ Or you can always edit the `JSON` configuration file that was generated.
   
 See the full configuration file reference [here](/docs/reference/configuration_file).
 
+Add yourself an administrative user using the [webadmin](/docs/reference/cli/#webadmin) subcommand:
+```sh
+sudo ./wag webadmin -add -username <your_username> -password <password_here>
+```
 
 {{< tabs "new_token" >}}
 
 {{< tab "Web UI" >}}
-
-Add yourself an administrative user using the [webadmin](/docs/reference/cli/#webadmin) subcommand:
-```
-sudo ./wag webadmin -add -username <your_username> -password <password_here>
-```
 
 Then login to the web interface in this example the web interface is listening on `localhost:4433`:
 
