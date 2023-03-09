@@ -94,4 +94,27 @@ So as an example here is a fragment of a wag configuration file:
 }, 
 ```
 
-Usually in wag you have to define your users, or groups in which a user is present. However for `OIDC` wag will automatically apply user groups based on the `OIDC` groups.
+### Management
+
+As the OIDC identity provider is providing groups to wag, there is no need to set up `groups` in wag for OIDC users. Simply go to `Rules` and define your group policies:
+
+In this case, I've added my user to the `toast` group in keycloak, so I create a `Rule` for that group (note the `group:` prefix):
+
+<div style="text-align:center">   
+<img src="/img/keycloak/group_toast_oidc.png" alt="Group policies" class="shadow">
+</div>
+
+
+Then after logging in my user can query it's routes:
+```json
+$ curl http://vpn.test:8081/status/
+{
+  "IsAuthorised": true,
+  "Routes": [
+    "2.2.2.2/32",
+    "10.123.5.1/32"
+  ]
+}
+```
+
+And we see the `2.2.2.2/32` route.
