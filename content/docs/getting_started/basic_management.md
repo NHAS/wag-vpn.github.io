@@ -11,10 +11,27 @@ Wag has a bunch of functionality, so this section is only going to define the mo
 
 
 ## List Devices
-
-### CLI
-
 Get a list of devices registered with wag.
+
+{{< tabs "list_devices" >}}
+
+{{< tab "Web UI" >}}
+
+Go to the devices page:
+
+<div style="text-align:center">   
+<img src="/img/show_ui/devices.png" alt="Devices menu section" class="shadow">
+</div>
+
+Then the devices are all information are listed in the table. Along with the actions you can take on said devices.
+
+<div style="text-align:center">   
+<img src="/img/show_ui/devices_page.png" alt="Devices page" class="shadow">
+</div>
+
+{{< /tab >}}
+
+{{< tab "CLI" >}}
 
 ```sh
 ./wag devices -list
@@ -31,34 +48,18 @@ bonk,10.123.5.3,rq+nDcQAxbKUbZ2dQjjXRF/tmOc+W4j8RUdUoFfC4hY=,0,<nil>
 bonk,10.123.5.2,oUg/qoWKpRljLSuS7qHp4JcXgUXY8iwbox2KaLO+sD4=,0,<nil>
 ```
 
-### Web UI
+{{< /tab >}}
 
-Go to the devices page:
-
-<div style="text-align:center">   
-<img src="/img/show_ui/devices.png" alt="Devices menu section" class="shadow">
-</div>
-
-Then the devices are all information are listed in the table. Along with the actions you can take on said devices.
-
-<div style="text-align:center">   
-<img src="/img/show_ui/devices_page.png" alt="Devices page" class="shadow">
-</div>
+{{< /tabs >}}
 
 ## Unlock Device
 
 A device will become locked if a user attempts to authorize too many times (configurable with `Lockout` [reference](/docs/reference/configuration_file/)). 
 A user may have multiple devices, if one device goes over the lockout threshold this will not effect the other devices. 
 
-### CLI
+{{< tabs "unlock_devices" >}}
 
-```sh
-# Either unlock every device a user has, or a specific device by address
-sudo ./wag devices -unlock -address 10.123.5.6
-sudo ./wag devices -unlock -username John
-```
-
-### Web UI
+{{< tab "Web UI" >}}
 
 On the devices page select the device to unlock:
 
@@ -72,19 +73,29 @@ Click `Unlock`.
 <img src="/img/show_ui/devices_after_unlock.png" alt="After unlock" class="shadow">
 </div>
 
+{{< /tab >}}
+
+{{< tab "CLI" >}}
+
+```sh
+# Either unlock every device a user has, or a specific device by address
+sudo ./wag devices -unlock -address 10.123.5.6
+sudo ./wag devices -unlock -username John
+```
+
+{{< /tab >}}
+
+
+{{< /tabs >}}
 
 ## Lock User Account
 
 Locking a user account means that no devices a user has are able to authorize. 
 
-### CLI
 
-```sh
-./wag users -lockaccount -username John
-```
+{{< tabs "lock_account" >}}
 
-### Web UI
-
+{{< tab "Web UI" >}}
 Browse to the users page:
 
 <div style="text-align:center">   
@@ -102,6 +113,15 @@ Click `Unlock`:
 <div style="text-align:center">   
 <img src="/img/show_ui/users_page_unlocked.png" alt="Users unlocked user" class="shadow">
 </div>
+{{< /tab >}}
+
+{{< tab "CLI" >}}
+```sh
+./wag users -lockaccount -username John
+```
+{{< /tab >}}
+
+{{< /tabs >}}
 
 
 
@@ -109,13 +129,9 @@ Click `Unlock`:
 
 In the event that a user has lost their MFA device, whether it is TOTP, Webauthn or otherwise you may have to reset their session to re-register an MFA device.
 
-### CLI
+{{< tabs "reset_mfa" >}}
 
-```sh
-sudo ./wag users -reset-mfa jordan_phone
-```
-
-### Web UI
+{{< tab "Web UI" >}}
 
 Browse to the users page:
 
@@ -136,9 +152,18 @@ Click `Reset MFA`:
 <img src="/img/show_ui/reset_mfa.png" alt="Reset MFA" class="shadow">
 </div>
 
-<br><br>
+{{< /tab >}}
 
-Thats it for basic management! 
+{{< tab "CLI" >}}
+```sh
+sudo ./wag users -reset-mfa jordan_phone
+```
+{{< /tab >}}
+
+{{< /tabs >}}
+
+
+<br><br>
 
 <div style="float: left;">
 {{< button relref="docs/getting_started/registering_users" >}}Previous{{< /button >}}
