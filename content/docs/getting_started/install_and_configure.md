@@ -133,5 +133,5 @@ sudo ./wag start
 
 
 <div style="float: right;">
-{{< button relref="docs/getting_started/basic_management" >}}Next{{< /button >}}
+{{< button relref="docs/getting_started/registering_users" >}}Next{{< /button >}}
 </div>
