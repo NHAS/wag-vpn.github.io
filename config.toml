@@ -1,6 +1,7 @@
 languageCode = 'en-us'
 title = 'Wag'
 theme = "hugo-book"
+canonifyurls = true
 
 custom_css = ["css/carousel.css"]
 custom_js = ["js/carousel.js"]
