@@ -46,19 +46,19 @@ sudo ./wag webadmin -add -username <your_username> -password <password_here>
 Then login to the web interface in this example the web interface is listening on `localhost:4433`:
 
 <div style="text-align:center">
-    <img src="/img/show_ui/signin.png" alt="Login Page" class="shadow">
+<img src="/img/show_ui/signin.png" alt="Login Page" class="shadow">
 </div>
 
 
 Navigate to "Rules":  
     
 <div style="text-align:center">
-    <img src="/img/show_ui/dashboard_for_config.png" alt="Dashboard" class="shadow">
+<img src="/img/show_ui/dashboard_for_config.png" alt="Dashboard" class="shadow">
 </div>
 
 Click `+ New`:
 <div style="text-align:center">
-    <img src="/img/show_ui/rules.png" alt="Dashboard" class="shadow">
+<img src="/img/show_ui/rules.png" alt="Dashboard" class="shadow">
 </div>
 
   
@@ -67,7 +67,7 @@ The `effects` input defines what user, or group the rule applies to.
 To apply to all users, set this to `*`.  
 Define your users and rules, the syntax for rule definitions can be found [here](/docs/reference/policy_rules.md):    
 <div style="text-align:center">
-    <img src="/img/show_ui/rules_dialog.png" alt="New Rule" class="shadow">
+<img src="/img/show_ui/rules_dialog.png" alt="New Rule" class="shadow">
 </div>
 
 {{< /tab >}}
@@ -120,6 +120,7 @@ Add your rules:
 ```
 
 {{< /tab >}}
+
 {{< /tabs >}}
 
 ## Start!
