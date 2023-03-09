@@ -2,9 +2,6 @@
 weight = 3
 bookToc = true
 +++
-<link rel="stylesheet" href="/css/custom.css">
-
-
 # Managing Wag
 
 Wag has a bunch of functionality, so this section is only going to define the most basic and most used actions you'll be taking when using wag in your day to day. 

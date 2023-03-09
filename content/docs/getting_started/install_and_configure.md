@@ -3,9 +3,6 @@ weight = 1
 bookToc = true
 +++
 
-<link rel="stylesheet" href="/css/custom.css">
-
-
 ## Installation
 
 1. Check requirements

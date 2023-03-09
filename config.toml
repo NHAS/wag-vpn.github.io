@@ -15,6 +15,13 @@ custom_js = ["js/carousel.js"]
   BookComments = false
 
 
+[menu]
+
+[[menu.after]]
+  name = "Github"
+  url = "https://github.com/NHAS/wag"
+  weight = 10
+
 [markup]
 
 [markup.goldmark.renderer]

@@ -2,7 +2,6 @@
 weight = 2
 bookToc = true
 +++
-<link rel="stylesheet" href="/css/custom.css">
 
 ## Device Registration
 
