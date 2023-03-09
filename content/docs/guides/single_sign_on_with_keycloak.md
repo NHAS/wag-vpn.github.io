@@ -15,6 +15,11 @@ If you want to test this in a development enviroment I suggest using the docker 
 sudo docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:20.0.2 start-dev
 ```
 
+## Why?
+
+Setting up an OIDC provider allows you to centrally manage what groups your wag users are part of, it also allows you to define your own authentication requirements such as account password which wag does not have. 
+Unfortunately enabling OIDC does not help with the registration process, as tokens are still generated per user.
+
 ## Configuring KeyCloak
 
 
@@ -95,7 +100,7 @@ So as an example here is a fragment of a wag configuration file:
         "oidc"                                                               
     ],                                                                   
     "OIDC": {                                                            
-        "IssuerURL": "https://sso.domain.tld/auth/realms/your-realm-name",    
+        "IssuerURL": "https://sso.domain.tld/realms/your-realm-name",    
         "ClientSecret": "SecretKey",              
         "ClientID": "wag-uat",                                       
         "GroupsClaimName": "groups"                                      
@@ -127,3 +132,17 @@ $ curl http://vpn.test:8081/status/
 ```
 
 And we see the `2.2.2.2/32` route.
+
+## Gotchas/Troubleshooting
+
+### Help my device says it's owned by another user?
+
+Wag strictly checks that the device owner (i.e the user that the registration token was generated for) is equal to the username that the identity provider issues.  
+This is so one user cant go on another users device and grant it access to additional routes which may not be appropriate for that device.  
+  
+You may have been provided with a wireguard configuration file, or registration token that had the wrong username associated with it.
+
+### Invalid redirection despite correct route
+
+If the `IssuerURL` has a trailing `/` this may cause the underlying OIDC library to fail in matching the issuer to your keycloak returned issuer. 
+Just remove the slash.
