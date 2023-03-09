@@ -1,4 +1,3 @@
-baseURL = 'http://wag-vpn.github.io/'
 languageCode = 'en-us'
 title = 'Wag'
 theme = "hugo-book"
