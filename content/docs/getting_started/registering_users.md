@@ -3,7 +3,8 @@ weight = 2
 bookToc = true
 +++
 <link rel="stylesheet" href="/css/custom.css">
-# Device Registration
+
+## Device Registration
 
 A user is created in wag by registering a device, a user may have many devices but will not be present in the system until they have registered one device.
 
@@ -18,7 +19,7 @@ token,username
 e83253fd9962c68f73aa5088604f3f425d58a963bfb5c0889cca54d63a34b2e3,tester
 ```
 
-### Management UI
+### Web UI
 
 Under the `Registration Tokens` section, add a new token.
 

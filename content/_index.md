@@ -88,13 +88,13 @@ PersistentKeepAlive = 10
 ```
 
 Browing directly to the URL in a Web browser:   
-   
+<div style="text-align:center">   
 <img src="/img/show_ui/web_browser_download_conf.png" alt="Web browser downloading config" class="shadow">
-
+</div>
 
 Or enabling mobile enrollment with `type=mobile`:  
-  
+<div style="text-align:center">  
 <img src="/img/show_ui/qr_code.png" alt="Qr code enrollment" class="shadow">
-
+</div>
 
 
