@@ -8,7 +8,7 @@ bookToc = true
 1. Check requirements
    ```
    Glibc 2.31+
-   Linux Kernel 5.3+
+   Linux Kernel 5.9+
    ```
 
 2. Download the latest release of wag:
